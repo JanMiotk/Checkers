@@ -1,0 +1,63 @@
+﻿@model Models.User
+@{
+//ViewData["Title"] = "Room";
+//int Points = 0;
+//string visitor = "gość";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/room.css" />
+}
+
+<div class="row spacing-top">
+    <div class="col-12 col-lg-6 game-panel padding-none">
+        <canvas id="Board" width="400" height="400"></canvas>
+        <div class="score-box">
+            <h3>Gratulacje</h3>
+            <p>Wygrał</p>
+            <p>kolor</p>
+            <p>Ile pionków zostało</p>
+            <button class="close-info">Ok</button>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 padding-none table-box">
+        <div class="table">
+            <div class="informations inf-pad">
+                <div class="box">
+                    <p class="title">Stół: @ViewBag.Table</p>
+                </div>
+                <div class="box">
+                    <a asp-action="Index" class="exit-btn" id="back-link"><input type="button" value="X" /></a>
+                </div>
+            </div>
+            <div class="possition inf-pad">
+                <div class="white">
+                    <p class="possition1">1#</p>
+                    <input type="button" class="possition1-btn white" value="1#" />
+                </div>
+                <div class="black">
+                    <p class="possition2">2#</p>
+                    <input type="button" class="possition2-btn black" value="2#" />
+                </div>
+            </div>
+            <div class="communicator inf-pad">
+                <textarea></textarea>
+                <input type="text" id="text" />
+                <input type="button" id="messageButton" value="Wyślij wiadomość" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+<script type="text/javascript">
+    var room = '@ViewBag.Table';
+    var nick = "@Model.Nick";
+</script>
+<script type="module" src="~/js/game/room.js" >
+    
+</script>
+}
+
+

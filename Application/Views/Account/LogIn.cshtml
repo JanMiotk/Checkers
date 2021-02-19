@@ -1,0 +1,38 @@
+﻿@model Models.LogInModel
+
+@{
+    ViewData["Title"] = "Index";
+    string returnUrl = ViewContext.HttpContext.Request.Query["ReturnUrl"];
+}
+
+<h3>Zaloguj się</h3>
+
+@if (ViewData["Success"] != null) { 
+    <p style="color: green; font-size: 0.8rem">@ViewData["Success"]</p>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="LogIn">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <input hidden value="@returnUrl" name="returnUrl" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zaloguj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<p>Jeśli nie posiadasz konta zarejestruj się tutaj <button class="btn btn-primary"><a asp-action="Register" style="color:white">Rejestracja</a></button></p>

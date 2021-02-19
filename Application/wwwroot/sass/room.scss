@@ -1,0 +1,217 @@
+﻿@mixin SittingPlace() {
+    width: 45%;
+    display: inline;
+    border: none;
+}
+@mixin SetSittingPlace() {
+    font-size: 11px;
+    height: 30px;
+
+    &:disabled {
+        color: black;
+        font-size: 9px;
+    }
+}
+
+@mixin possitionTop() {
+    display: block;
+    width: 145px;
+    margin: 0;
+    height: 18px;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+@mixin possitionBottom() {
+    width: 145px;
+    border: none;
+    padding: 0 5px;
+}
+
+@mixin communicatorParamiters() {
+    width: 295px;
+    align-self: center;
+}
+
+@mixin sendingButton() {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 0;
+    outline: none;
+    font-weight: bold;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+/*$marginForAllElementsOnTable : 3%;
+$marginBettwenBoxes : 10%;*/
+
+
+.score-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(153, 204, 238);
+    display: none;
+
+    h3 {
+        padding-bottom: 30px;
+    }
+
+    padding {
+        padding-bottom: 15px;
+    }
+
+    button {
+        width: 150px;
+        @include sendingButton();
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+.spacing-top {
+    margin-top: 100px;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.box {
+    width: 145px;
+    height: 38px;
+    position: relative;
+}
+
+.game-panel {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inf-pad {
+    padding: 10px;
+}
+
+.table {
+    background-color: rgb(153, 204, 238);
+    height: 400px;
+    width: 350px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+
+    .informations {
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            font-size: 20px;
+        }
+
+        .exit-btn {
+            position: absolute;
+            right: 0px;
+        }
+    }
+
+    .possition {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .white {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            color: white;
+            background-color: black;
+            @include possitionTop();
+        }
+
+        input {
+            color: black;
+            background-color: white;
+            @include possitionBottom();
+        }
+    }
+
+    .black {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            color: black;
+            background-color: white;
+            @include possitionTop();
+        }
+
+        input {
+            color: white;
+            background-color: black;
+            @include possitionBottom();
+        }
+    }
+
+    .communicator {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 250px;
+
+        textarea {
+            height: 150px;
+            @include communicatorParamiters();
+        }
+
+        input {
+            @include communicatorParamiters();
+        }
+
+        input[type="button"] {
+            @include sendingButton();
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .game-panel {
+        justify-content: center;
+    }
+
+    .table-box {
+        display: flex;
+        justify-content: center;
+
+        .table {
+            width: 400px;
+        }
+    }
+
+    .score-box {
+        justify-content: center;
+    }
+}
+
+/*.game-panel {
+    canvas {
+        display: none;
+    }
+}*/
+
