@@ -5,15 +5,15 @@ const path = require('path');
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 module.exports = {
     entry: {
-        e: "./wwwroot/js/game/Board.js"
+        e: "./wwwroot/js/game/room.js"
     },
     optimization: {
-        // We no not want to minimize our code.
-        minimize: false
+
+        minimize: true
     },
     mode: 'production',
     output: {
-        path: path.resolve(__dirname, './wwwroot/dist'),
+        path: path.resolve(__dirname, './wwwroot/js'),
         filename: "game.js",
         publicPath: ASSET_PATH,
     },

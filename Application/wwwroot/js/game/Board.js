@@ -1,6 +1,6 @@
-﻿import { Pawn } from './Pawn.js';
-import { Queen } from './Queen.js';
-import { Field } from './Field.js';
+﻿import { Pawn } from './pawn.js';
+import { Queen } from './queen.js';
+import { Field } from './field.js';
 
 export class Board {
     fields = [];

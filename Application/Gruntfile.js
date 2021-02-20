@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         sass: {
             options: {
-                sourceMap: true, // Create source map
+                sourceMap: false, // Create source map
                 style: 'compressed'
                 
             },
@@ -49,7 +49,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-webpack");
-
     grunt.registerTask('default', ['watch']);
 
 };

@@ -1,4 +1,4 @@
-﻿import { Board } from "./Board.js"
+﻿import { Board } from "./board.js"
 
 var canvas = document.getElementById("Board");
 var communicator = document.querySelector("textarea");
