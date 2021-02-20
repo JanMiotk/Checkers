@@ -49,7 +49,7 @@ dotnet ef database update --startup-project Application  --project Depot
 
 ![alt text](https://media.giphy.com/media/9WZVRIvWdlRgMDRufi/giphy.gif)
 
-![alt text]https://media.giphy.com/media/48DN7r54afr6S8snJW/giphy.gif)
+![alt text](https://media.giphy.com/media/48DN7r54afr6S8snJW/giphy.gif)
 
 * There can be only 2 players and unlimited number of visitors
 
