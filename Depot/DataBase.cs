@@ -67,8 +67,7 @@ namespace Depot
                         Name = "Sebastian",
                         Surname = "Roden",
                         Password = "password"
-                    }
-            );
+                    });
 
             modelBuilder.Entity<Table>()
                 .HasData(
@@ -95,9 +94,7 @@ namespace Depot
                         ID = 4,
                         Name = "Beginner",
                         Link = "/Room/Beginner",
-                    }
-            );
-
+                    });
         }
     }
 }
