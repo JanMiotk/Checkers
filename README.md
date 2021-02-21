@@ -2,7 +2,7 @@
 
 Used technologies: c#, .net core, websocket, javascript, bootstrap, sass, html5, grunt, webpack
 
-## Need to
+## Need to do
 
 You should adjust your connection string in appsettings.json 
 ```
